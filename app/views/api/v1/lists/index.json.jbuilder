@@ -1,0 +1,1 @@
+json.data(@lists){ |list| json.extract!(list, :id, :title, :body)}
