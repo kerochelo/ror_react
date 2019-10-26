@@ -28,17 +28,19 @@ class ListForm extends React.Component{
 
   render(){
     return(
-      <form className="form__Box" onSubmit={this.hundleSubmit}>
-        <div className="form-group">
-          Todo <input type="text" ref="title" className="form-control" />
-        </div>
-        <div className="form-group">
-          Detail <input type="text" ref="body" className="form-control" />
-        </div>
-        <div className="form-group">
-          <input type="submit" value="Post" className="btn btn-primary" />
-        </div>
-      </form>
+      <div className="col-4">
+        <form className="form__Box" onSubmit={this.hundleSubmit}>
+          <div className="form-group">
+            Todo <input type="text" ref="title" className="form-control" />
+          </div>
+          <div className="form-group">
+            Detail <input type="text" ref="body" className="form-control" />
+          </div>
+          <div className="form-group">
+            <input type="submit" value="Post" className="btn btn-primary" />
+          </div>
+        </form>
+      </div>
     );
   }
 }
@@ -50,12 +52,12 @@ class TodoLists extends React.Component{
   }
   render(){
     return(
-      <div className="list__Box">
+      <div className="list__Box col-8">
         <h1>TodoLists</h1>
         <table className="table table-hover">
           <thead className="thead-dark">
             <tr>
-              <th>What</th>
+              <th>Todo</th>
               <th>Detail</th>
             </tr>
           </thead>
@@ -120,7 +122,7 @@ class ListBox extends React.Component{
 
   render () {
     return (
-      <div>
+      <div className="row">
         <TodoLists lists={this.state.lists} />
         <ListForm onTodoSubmit={this.handleTodoSubmit}/>
       </div>

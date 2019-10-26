@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :lists
+  root 'lists#index'
   namespace :api, format: 'json' do
     namespace :v1 do
-      resources :lists
+      resources :lists, only: %i[index create]
     end
   end
 end

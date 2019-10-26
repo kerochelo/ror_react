@@ -1,6 +1,7 @@
 # README
 TODOList App
 
-Ruby
-Ruby on Rails
-React
+## soft
+- Ruby
+- Ruby on Rails
+- React
