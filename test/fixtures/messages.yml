@@ -1,10 +1,9 @@
 # == Schema Information
 #
-# Table name: lists
+# Table name: messages
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  body       :text
+#  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -12,9 +11,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  body: MyText
+  content: MyText
 
 two:
-  title: MyString
-  body: MyText
+  content: MyText

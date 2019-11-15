@@ -1,13 +1,12 @@
 # == Schema Information
 #
-# Table name: lists
+# Table name: messages
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  body       :text
+#  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class List < ApplicationRecord
+class Message < ApplicationRecord
 end

@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 function Todo(props){
   return(
@@ -74,7 +73,7 @@ class TodoLists extends React.Component{
   }
 }
 
-class ListBox extends React.Component{
+export default class ListBox extends React.Component{
   constructor(props){
     super(props);
     this.handleTodoSubmit = this.handleTodoSubmit.bind(this);
@@ -103,7 +102,6 @@ class ListBox extends React.Component{
   }
 
   handleTodoSubmit(todos){
-    console.log(todos);
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -129,6 +127,3 @@ class ListBox extends React.Component{
     );
   }
 }
-
-
-export default ListBox;

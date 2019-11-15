@@ -1,0 +1,12 @@
+= render partial: 'shared/flash_message'
+= form_with model: user do |f|
+  .form-group
+    = f.label :email, 'email'
+    = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :password, 'pass'
+    = f.text_field :password, class: 'form-control'
+  .form-group
+    = f.label :password_confirmation, 'pass_confirmation'
+    = f.text_field :password_confirmation, class: 'form-control'
+  = f.submit 'save', class: 'btn btn-primary'

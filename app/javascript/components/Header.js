@@ -3,8 +3,8 @@ import React, {Fragment} from "react"
 
 function NavItem(){
   return(
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+    <li className="nav-item">
+      <a className="nav-link" href="/users/new">create account</a>
     </li>
   );
 }
@@ -12,10 +12,10 @@ function NavItem(){
 function DropDownListItem(){
   return(
     <a
-      class="dropdown-item"
-      href="#"
+      className="dropdown-item"
+      href="/rooms"
     >
-      jintori
+      chat
     </a>
   );
 }
@@ -68,14 +68,14 @@ function TopLink(props){
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <OtherLinks />
       </div>
     </Fragment>
   );
 }
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   constructor(props){
     super(props);
   }
@@ -83,10 +83,7 @@ class Header extends React.Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <TopLink path={this.props.path} />
-        <OtherLinks />
       </nav>
     );
   }
 }
-
-export default Header
